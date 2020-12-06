@@ -46,7 +46,6 @@ def aStarSearch(problem):
                     node.parent = currentState.name
                     frontier.push(node, totalCost)
     end = time.time()
-    "*** YOUR A* CODE HERE ***"
     actions = backtrack(problem, currentState, problem.getStartState())
     # print(actions[::-1])
     actions = actions[::-1]

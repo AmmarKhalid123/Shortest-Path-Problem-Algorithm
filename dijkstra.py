@@ -23,16 +23,12 @@ def dijkstra(graph, source, target=None):
     dist = {}  #lengths of the shortest paths to each node
     pred = {}  #predecessor node in each shortest path
 
-    # Store distance scores in a priority queue dictionary
     pq = minpq()
     for node in graph:
         if node == source:
             pq[node] = 0
         else:
             pq[node] = float('inf')
-            
-    # popitems always pops out the node with min score
-    # Removing a node from pqdict is O(log n).
     for node, min_dist in pq.popitems():
         dist[node] = min_dist
         if node == target:
